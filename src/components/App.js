@@ -1,22 +1,32 @@
 import { Route, Routes } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "../pages/Home";
-import Signup from "../pages/auth/Signup";
-import Login from "../pages/auth/Login";
-import ProtectedRoute from "../pages/auth/ProtectedRoute";
+import ListaTabela from "../pages/ListaTabela";
+import CriarUsuario from "../pages/CriarUsuario";
+import DetalheUsuario from "../pages/DetalheUsuario";
+import EditarUsuario from "../pages/EditarUsuario";
+import DeleteUsuario from "../pages/DeletarUsuario";
+import Tabela from "../pages/TabelaUsuario";
+import Top from "../components/Navbar";
 
 import { AuthContextComponent } from "../contexts/authContext";
 
 function App() {
   return (
-    <AuthContextComponent>
-      <Routes>
-        <Route path="/" element={<ProtectedRoute component={Home} />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-    </AuthContextComponent>
+    <div className="color-site">
+      <AuthContextComponent>
+        <Top />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/lista" element={<ListaTabela />} />
+          <Route path="/tabela" element={<Tabela />} />
+          <Route path="/criar" element={<CriarUsuario />} />
+          <Route path="/detalhe/:id" element={<DetalheUsuario />} />
+          <Route path="/editar/:id" element={<EditarUsuario />} />
+          <Route path="/deletar/:id" element={<DeleteUsuario />} />
+        </Routes>
+      </AuthContextComponent>
+    </div>
   );
 }
 

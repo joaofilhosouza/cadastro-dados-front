@@ -1,21 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import ListaUsuario from "./ListaTabela";
+import { HomeContainer, DivHome, DivTh } from "./Tabela.style";
 
 function Home() {
   return (
-    <div className="text-center">
-      <img
-        src="https://coursereport-s3-production.global.ssl.fastly.net/uploads/school/logo/84/original/logo-ironhack-blue.png"
-        alt="ironhack logo"
-      />
-      <h1>React IronPlate</h1>
-      <p>This is the homepage</p>
-      <div className="d-flex flex-column align-items-center">
-        <Link className="btn btn-lg btn-primary" to="/auth/signup">
-          Signup here!
-        </Link>
-      </div>
-    </div>
+    <>
+      <HomeContainer>
+        <DivHome>
+          <DivTh> Nome</DivTh>
+          <DivTh>Idade</DivTh>
+          <DivTh>Estado Civil</DivTh>
+          <DivTh>CPF</DivTh>
+          <DivTh>Cidade</DivTh>
+          <DivTh>Estado</DivTh>
+          <DivTh>Editar</DivTh>
+          <DivTh>Deletar</DivTh>
+          <DivTh>Detalhes</DivTh>
+        </DivHome>
+      </HomeContainer>
+      <ListaUsuario />
+    </>
   );
 }
 
