@@ -11,6 +11,7 @@ import {
   DivThDetalhe,
   PaginaDetalhe,
   DivDetalheTbody,
+  ContainerPaginaDetalhe,
 } from "../pages/Tabela.style";
 
 function DetalheUsuario(props) {
@@ -46,7 +47,7 @@ function DetalheUsuario(props) {
   }, [id]);
 
   return (
-    <>
+    <ContainerPaginaDetalhe>
       <PaginaDetalhe>
         <DetalheContainer>
           <DivDetalhe>
@@ -85,6 +86,12 @@ function DetalheUsuario(props) {
           </DivTd>
         </DivDetalheTbody>
       </PaginaDetalhe>
+      <a
+        href="/"
+        className="btn btn-link text-light  btn-primary me-auto  p-3 "
+      >
+        Voltar
+      </a>
       <ConfirmationModal
         title="Tem certeza que quer deletar?"
         variant="danger"
@@ -98,7 +105,7 @@ function DetalheUsuario(props) {
       >
         Esta ação é irreversível!
       </ConfirmationModal>
-    </>
+    </ContainerPaginaDetalhe>
   );
 }
 

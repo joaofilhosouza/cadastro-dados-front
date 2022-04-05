@@ -133,21 +133,24 @@ function CriarUsuario() {
               <button
                 disabled={loading}
                 type="submit"
-                className="btn-primary mb-3"
+                className="btn-primary me-5 p-3"
               >
                 {loading ? (
                   <>
                     <span
-                      className="spinner-border spinner-border-sm"
+                      className="spinner-border spinner-border-sm "
                       role="status"
                       aria-hidden="true"
                     ></span>{" "}
                     <span>Carregando...</span>{" "}
                   </>
                 ) : (
-                  "Ciar"
+                  "Criar"
                 )}
               </button>
+              <a href="/" className="btn btn-link text-light  btn-primary p-3 ">
+                Voltar
+              </a>
             </div>
           </form>
         </div>

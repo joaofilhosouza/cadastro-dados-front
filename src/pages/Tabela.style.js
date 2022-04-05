@@ -22,9 +22,8 @@ export const DivTd = styled.td`
 
 // estilos da home
 export const HomeContainer = styled.div`
-  width: 71%;
+  width: 81%;
   padding: 10px;
-  background: #7b7575;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -41,12 +40,18 @@ export const DivTh = styled.th`
 `;
 export const DivHome = styled.tr`
   display: flex;
-  width: 100%;
+  width: 88%;
   padding: 10px;
   margin: 0 auto;
+  background: #7b7575;
 `;
 
 // estilo detalhe da tabela
+export const ContainerPaginaDetalhe = styled.div`
+  margin: 0 auto;
+  text-align: center;
+`;
+
 export const DetalheContainer = styled.div`
   width: 90%;
   padding: 10px;
@@ -54,6 +59,7 @@ export const DetalheContainer = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 5px;
 `;
 
 export const DivThDetalhe = styled.th`
