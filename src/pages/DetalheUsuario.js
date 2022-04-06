@@ -71,7 +71,7 @@ function DetalheUsuario(props) {
           <DivTd>{usuarioDetalhe.Estado}</DivTd>
           <DivTd>
             <button className="btn btn-warning">
-              <Link to={`/editar/${id}`}>
+              <Link to={`/editar/api/${id}`}>
                 <BiEdit />
               </Link>
             </button>

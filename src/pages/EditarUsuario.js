@@ -27,9 +27,7 @@ function Signup() {
   useEffect(() => {
     async function room() {
       try {
-        const response = await api.get(
-          `http://localhost:4000/api/delete-usuario/${id}`
-        );
+        const response = await api.get(`/delete-usuario/api/${id}`);
 
         delete response.data._id;
 
@@ -53,7 +51,7 @@ function Signup() {
       setError(null);
 
       const response = await api.patch(
-        `http://localhost:4000/api/atualizar-usuario/${id}`,
+        `/atualizar-usuario/api/${id}`,
         roomData
       );
 
