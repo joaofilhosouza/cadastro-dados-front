@@ -1,4 +1,4 @@
-# Sisteme de cadastro Banco de dados
+# Sistema de cadastro Banco de dados
 
 ## Imagens do projeto
 
