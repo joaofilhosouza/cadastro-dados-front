@@ -1,5 +1,5 @@
 import React from "react";
-import ListaUsuario from "./ListaTabela";
+import ListaUsuario from "./TabelaUsuario";
 import { HomeContainer, DivHome, DivTh } from "./Tabela.style";
 
 function Home() {
