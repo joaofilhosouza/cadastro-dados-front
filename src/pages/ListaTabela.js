@@ -10,7 +10,7 @@ function ListaUsuario() {
       try {
         const response = await api.get("/lista-usuario");
 
-        setListaUsuario({ ...response.data });
+        setListaUsuario([...response.data]);
       } catch (err) {
         console.error(err);
       }
