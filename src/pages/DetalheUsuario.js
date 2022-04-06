@@ -11,7 +11,6 @@ import {
   DivThDetalhe,
   PaginaDetalhe,
   DivDetalheTbody,
-  ContainerPaginaDetalhe,
 } from "../pages/Tabela.style";
 
 function DetalheUsuario(props) {
@@ -34,7 +33,9 @@ function DetalheUsuario(props) {
   useEffect(() => {
     async function fetchDetalhe() {
       try {
-        const response = await api.get(`/detalhe-usuario/${id}`);
+        const response = await api.get(
+          `http://localhost:4000/api/detalhe-usuario/${id}`
+        );
 
         setUsuarioDetalhe({ ...response.data });
       } catch (err) {
@@ -45,7 +46,7 @@ function DetalheUsuario(props) {
   }, [id]);
 
   return (
-    <ContainerPaginaDetalhe>
+    <>
       <PaginaDetalhe>
         <DetalheContainer>
           <DivDetalhe>
@@ -69,7 +70,7 @@ function DetalheUsuario(props) {
           <DivTd>{usuarioDetalhe.Estado}</DivTd>
           <DivTd>
             <button className="btn btn-warning">
-              <Link to={`/editar/api/${id}`}>
+              <Link to={`/editar/${id}`}>
                 <BiEdit />
               </Link>
             </button>
@@ -84,12 +85,6 @@ function DetalheUsuario(props) {
           </DivTd>
         </DivDetalheTbody>
       </PaginaDetalhe>
-      <a
-        href="/"
-        className="btn btn-link text-light  btn-primary me-auto  p-3 "
-      >
-        Voltar
-      </a>
       <ConfirmationModal
         title="Tem certeza que quer deletar?"
         variant="danger"
@@ -103,7 +98,7 @@ function DetalheUsuario(props) {
       >
         Esta ação é irreversível!
       </ConfirmationModal>
-    </ContainerPaginaDetalhe>
+    </>
   );
 }
 

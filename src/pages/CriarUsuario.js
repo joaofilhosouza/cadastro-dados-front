@@ -25,9 +25,12 @@ function CriarUsuario() {
 
     try {
       setLoading(true);
-      const response = await api.post("/cadastrar-usuario", {
-        ...usuario,
-      });
+      const response = await api.post(
+        "http://localhost:4000/api/cadastrar-usuario",
+        {
+          ...usuario,
+        }
+      );
       navigate("/lista");
 
       console.log(response);
@@ -45,7 +48,7 @@ function CriarUsuario() {
         <div className="container cadastro">
           <form onSubmit={handleSubmit}>
             <h1 className="titulos">Criar Tabela</h1>
-            {/* campo do Nome */}
+            {/* campo do titulo */}
             <div className=" mb-3 ">
               <FormField
                 label="Nome"
@@ -59,7 +62,7 @@ function CriarUsuario() {
               />
             </div>
 
-            {/* campo da idade */}
+            {/* campo do Author */}
             <div className=" mb-3">
               <FormField
                 label="Idade"
@@ -73,7 +76,7 @@ function CriarUsuario() {
               />
             </div>
 
-            {/* campo estado civil */}
+            {/* campo sinopse do livro */}
             <div className=" mb-3">
               <FormField
                 label="Estado Civil"
@@ -87,7 +90,7 @@ function CriarUsuario() {
               />
             </div>
 
-            {/* campo cpf */}
+            {/* campo Ano do livro */}
             <div className="mb-3">
               <FormField
                 label="CPF"
@@ -101,7 +104,7 @@ function CriarUsuario() {
               />
             </div>
 
-            {/* campo cidade */}
+            {/* campo Gênero do livro */}
             <div className=" mb-3">
               <FormField
                 label="Cidade"
@@ -113,7 +116,7 @@ function CriarUsuario() {
                 readOnly={loading}
               />
             </div>
-            {/* campo estado */}
+            {/* campo imagem do livro */}
             <div className="mb-3">
               <FormField
                 type="text"
@@ -125,31 +128,28 @@ function CriarUsuario() {
                 readOnly={loading}
               />
             </div>
-          </form>
 
-          <div>
-            <button
-              disabled={loading}
-              type="submit"
-              className="btn-primary me-5 p-3"
-            >
-              {loading ? (
-                <>
-                  <span
-                    className="spinner-border spinner-border-sm "
-                    role="status"
-                    aria-hidden="true"
-                  ></span>{" "}
-                  <span>Carregando...</span>{" "}
-                </>
-              ) : (
-                "Criar"
-              )}
-            </button>
-            <a href="/" className="btn btn-link text-light  btn-primary p-3 ">
-              Voltar
-            </a>
-          </div>
+            <div>
+              <button
+                disabled={loading}
+                type="submit"
+                className="btn-primary mb-3"
+              >
+                {loading ? (
+                  <>
+                    <span
+                      className="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>{" "}
+                    <span>Carregando...</span>{" "}
+                  </>
+                ) : (
+                  "Ciar"
+                )}
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
