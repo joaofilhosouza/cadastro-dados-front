@@ -16,7 +16,7 @@ Página de atualização de dados.
 
 Atualização do campo estado civil.
 
-![foto dado atualizado](https://github.com/jfilinho/cadastro-dados-front/blob/main/tela4%20(3).png)
+![foto dado atualizado](<https://github.com/jfilinho/cadastro-dados-front/blob/main/tela4%20(3).png>)
 
 Página de detalhe do registro
 
@@ -34,7 +34,13 @@ Dado deletado
 
 Desenvolvimento de um sistema de cadastro de dados, com hospedagem em um banco.
 
-Foi desenvolvido com o React que é uma biblioteca de JavaScript, para construção de interfaces de usuários. O armazenamento dos dados está sendo feito com o mongoDB, um banco de dados não relacional, uso do Node.js para criação de rotas no back-end, e no front-end  a estilização foi com o styled-component e react-bootstrap.
+Foi desenvolvido com o React que é uma biblioteca de JavaScript, para construção de interfaces de usuários. O armazenamento dos dados está sendo feito com o mongoDB, um banco de dados não relacional, uso do Node.js para criação de rotas no back-end, e no front-end a estilização foi com o styled-component e react-bootstrap.
+
+Deploys foram feitos com MongoDb Atlas para o banco, Heroku para o Back-end e Netlify para o Front-end, segue o link do projeto abaixo.
+
+## Acesse o projeto
+
+[Sistema de cadastro](https://cadastro-deusuario.netlify.app)
 
 ### Link Repositório do Backend
 
