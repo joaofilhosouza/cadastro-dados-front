@@ -12,7 +12,7 @@ function ListaUsuario() {
 
         setListaUsuario({ ...response.data });
       } catch (err) {
-        console.log(err);
+        console.error(err);
       }
     }
     fetchTabela();
