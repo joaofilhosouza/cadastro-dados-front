@@ -33,7 +33,7 @@ function DetalheUsuario(props) {
   useEffect(() => {
     async function fetchDetalhe() {
       try {
-        const response = await api.get(`/detalhe-usuario/${id}`);
+        const response = await api.get(`/*detalhe-usuario/${id}`);
 
         setUsuarioDetalhe({ ...response.data });
       } catch (err) {
