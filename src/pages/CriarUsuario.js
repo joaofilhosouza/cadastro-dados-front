@@ -25,12 +25,9 @@ function CriarUsuario() {
 
     try {
       setLoading(true);
-      const response = await api.post(
-        "http://localhost:4000/api/cadastrar-usuario",
-        {
-          ...usuario,
-        }
-      );
+      const response = await api.post("/cadastrar-usuario", {
+        ...usuario,
+      });
       navigate("/lista");
 
       console.log(response);

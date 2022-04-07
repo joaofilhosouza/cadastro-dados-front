@@ -11,7 +11,7 @@ function DeleteUsuario() {
   useEffect(() => {
     async function DeleteUsuario() {
       try {
-        await api.delete(`http://localhost:4000/api/delete-usuario/${id}`);
+        await api.delete(`/delete-usuario/${id}`);
         navigate("/lista");
       } catch (err) {
         console.error(err);
