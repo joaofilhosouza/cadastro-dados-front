@@ -8,7 +8,9 @@ function ListaUsuario() {
   useEffect(() => {
     async function fetchTabela() {
       try {
-        const response = await api.get("/*lista-usuario");
+        const response = await api.get(
+          "http://localhost:4000/api/lista-usuario"
+        );
 
         setListaUsuario([...response.data]);
       } catch (err) {
