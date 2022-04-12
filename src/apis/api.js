@@ -6,19 +6,19 @@ const api = axios.create({
 });
 
 // Configura a instância do Axios para injetar o cabeçalho de autenticação antes de cada requisição
-// api.interceptors.request.use((config) => {
-//   // Verifica se já temos as informações do usuário logado no localStorage
-//   const storedUser = localStorage.getItem("loggedInUser");
+api.interceptors.request.use((config) => {
+  // Verifica se já temos as informações do usuário logado no localStorage
+  const storedUser = localStorage.getItem("loggedInUser");
 
-//   const loggedInUser = JSON.parse(storedUser || '""');
+  const loggedInUser = JSON.parse(storedUser || '""');
 
-//   if (loggedInUser.token) {
-//     config.headers = {
-//       Authorization: `Bearer ${loggedInUser.token}`,
-//     };
-//   }
+  if (loggedInUser.token) {
+    config.headers = {
+      Authorization: `Bearer ${loggedInUser.token}`,
+    };
+  }
 
-//   return config;
-// });
+  return config;
+});
 
 export default api;
