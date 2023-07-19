@@ -1,5 +1,7 @@
 # Sistema de cadastro Banco de dados
 
+Este é um sistema de CRUD, com cadastro de dados, exibição em uma tabela, edição e deleção de conteúdos.
+
 ## Imagens do projeto
 
 Tela de cadastro no banco de dados.
