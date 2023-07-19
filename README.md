@@ -39,9 +39,6 @@ Foi desenvolvido com o React que é uma biblioteca de JavaScript, para construç
 Deploys foram feitos com MongoDb Atlas para o banco, Heroku para o Back-end e Netlify para o Front-end, segue o link do projeto abaixo.
 
 ## Acesse o projeto
-
-[Sistema de cadastro](https://cadastro-deusuario.netlify.app)
-
 ### Link Repositório do Backend
 
 [Repositório Backend](https://github.com/jfilinho/cadastro-dados-back)
