@@ -40,7 +40,6 @@ Deploys foram feitos com MongoDb Atlas para o banco, Heroku para o Back-end e Ne
 
 ## Acesse o projeto
 
-[Sistema de cadastro](https://cadastro-deusuario.netlify.app)
 
 ### Link Repositório do Backend
 
